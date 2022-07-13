@@ -1,5 +1,11 @@
 <template>
   <div>
+    <!-- 面包屑导航 -->
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>权限管理</el-breadcrumb-item>
+      <el-breadcrumb-item>权限列表</el-breadcrumb-item>
+    </el-breadcrumb>
     <el-card class="box-card">
       <el-table :data="getRightList" style="width: 100%" border>
         <el-table-column label="#" width="50" type="index"> </el-table-column>
@@ -51,4 +57,7 @@ export default {
 </script>
 
 <style scoped>
+.el-breadcrumb {
+  margin-bottom: 15px;
+}
 </style>
